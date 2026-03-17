@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|c:\\users\\victo\\onedrive - advtech ltd\\documents\\bcad323\\year 3\\semester 2\\prog7312\\schoolmanagementsystem\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|c:\\users\\victo\\onedrive - advtech ltd\\documents\\bcad323\\year 3\\semester 2\\prog7312\\schoolmanagementsystem\\models\\studdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|solutionrelative:models\\studdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|c:\\users\\victo\\onedrive - advtech ltd\\documents\\bcad323\\year 3\\semester 2\\prog7312\\schoolmanagementsystem\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|c:\\users\\victo\\onedrive - advtech ltd\\documents\\bcad323\\year 3\\semester 2\\prog7312\\schoolmanagementsystem\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|solutionrelative:controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|c:\\users\\victo\\onedrive - advtech ltd\\documents\\bcad323\\year 3\\semester 2\\prog7312\\schoolmanagementsystem\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|c:\\users\\victo\\onedrive - advtech ltd\\documents\\bcad323\\year 3\\semester 2\\prog7312\\schoolmanagementsystem\\controllers\\enrolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|solutionrelative:controllers\\enrolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "Models\\Student.cs",
+              "ToolTip": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Models\\Student.cs",
+              "RelativeToolTip": "Models\\Student.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T14:31:05.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudDTO.cs",
+              "DocumentMoniker": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Models\\StudDTO.cs",
+              "RelativeDocumentMoniker": "Models\\StudDTO.cs",
+              "ToolTip": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Models\\StudDTO.cs",
+              "RelativeToolTip": "Models\\StudDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T14:30:59.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Controllers\\StudentController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwB8AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T13:34:32.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Controllers\\CourseController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T13:34:10.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnrolController.cs",
+              "DocumentMoniker": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Controllers\\EnrolController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EnrolController.cs",
+              "ToolTip": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Controllers\\EnrolController.cs",
+              "RelativeToolTip": "Controllers\\EnrolController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T13:33:51.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T13:32:52.59Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
