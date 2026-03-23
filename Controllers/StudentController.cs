@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SchoolManagementSystem.Data;
 using SchoolManagementSystem.Models;
+using System.Threading.Tasks;
 
 namespace SchoolManagementSystem.Controllers
 {
@@ -9,7 +10,8 @@ namespace SchoolManagementSystem.Controllers
     {
         private readonly AppDbCtx _ctx;
         private readonly ILogger<StudentController> _logger;
-        public StudentController(AppDbCtx ctx, ILogger<StudentController> logger) {
+        public StudentController(AppDbCtx ctx, ILogger<StudentController> logger)
+        {
             _ctx = ctx;
             _logger = logger;
         }
@@ -17,45 +19,44 @@ namespace SchoolManagementSystem.Controllers
         [HttpGet]
         public IActionResult StudentDash()
         {
-            var students = _ctx.Students.Where(s => s.IsActive == true).ToList();
-            if (students.Count > 0)
-            {
-                return View(students);
-            }
-            else 
-            {
-                return View();
-            }
+           var studDTO = new StudDTO()
+           {
+               Students = _ctx.Students.Where(s => s.IsActive == true).ToList(),
+           }; 
+            return View(studDTO);
+
         }
 
         [HttpGet]
-        public IActionResult SearchStudent(string search)
+        public IActionResult Search(string search)
         {
-            var student = _ctx.Students.Where(s => s.IsActive == true && (s.StudNum.Contains(search) || s.FirstName.Contains(search) || s.LastName.Contains(search)));
+            var student = new StudDTO()
+            {
+                Students = _ctx.Students.Where(s => s.IsActive == true && (s.StudNum.Contains(search) || s.FirstName.Contains(search) || s.LastName.Contains(search)))
+            };
+
             if (student != null)
             {
-                return View(student);
+                return View("~/Views/Home/Student.cshtml", student);
             }
-            else
-            {
-                return View();
-            }
+            return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> StudentForm(StudDTO stud)
+        public async Task<IActionResult> Create(StudDTO stud)
         {
-            if (!ModelState.IsValid) 
+            if (!ModelState.IsValid)
             {
-                if(_ctx.Students.Any(s => s.StudNum == stud.StudNum || s.Email == stud.Email)) 
+                if (_ctx.Students.Any(s => s.StudNum == stud.StudNum || s.Email == stud.Email))
                 {
                     ModelState.AddModelError("Student", "Student number or email already exists!");
-                    return View("~/Views/Home/CreateStudent.cshtml", stud);
+                    return View("~/Views/Home/Student.cshtml", stud);
                 }
                 ModelState.AddModelError("Student", "Please enter valid student details.");
                 return View(stud);
             }
-            Student student = new Student() {
+            Student student = new Student()
+            {
                 StudNum = stud.StudNum,
                 FirstName = stud.FirstName,
                 LastName = stud.LastName,
@@ -64,41 +65,41 @@ namespace SchoolManagementSystem.Controllers
 
             await _ctx.AddAsync(student);
             await _ctx.SaveChangesAsync();
-            return RedirectToAction("Nav","StudDash");
+            return RedirectToAction("Nav", "Student");
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditStudent(StudDTO stud)
+        public async Task<IActionResult> Edit(StudDTO stud)
         {
-            if (!ModelState.IsValid) 
+            if (!ModelState.IsValid)
             {
                 ModelState.AddModelError("Student", "Please fill all fields");
-                return View("~/Views/Home/EditStudent.cshtml", stud);
+                return View("~/Views/Home/Student.cshtml", stud);
             }
 
-            var student = await _ctx.Students.FirstOrDefaultAsync(s=>s.Id == stud.Id);
-            if (student == null) 
+            var student = await _ctx.Students.FirstOrDefaultAsync(s => s.Id == stud.Id);
+            if (student == null)
             {
                 return NotFound();
-            }          
+            }
 
             _ctx.Update(student);
             await _ctx.SaveChangesAsync();
-            return RedirectToAction("Nav", "StudDash");
+            return RedirectToAction("Nav", "Student");
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteStudent(int id) 
-        { 
+        public async Task<IActionResult> Delete(int id)
+        {
             var student = _ctx.Students.FirstOrDefault(s => s.Id == id);
-            if (student == null) 
+            if (student == null)
             {
                 return NotFound();
             }
 
             student.IsActive = false;
             await _ctx.SaveChangesAsync();
-            return RedirectToAction("Nav", "StudDash");
+            return RedirectToAction("Nav", "Student");
         }
     }
 }
