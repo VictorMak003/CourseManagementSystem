@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SchoolManagementSystem.Data;
+using SchoolManagementSystem.DTOs;
 using SchoolManagementSystem.Models;
+using SchoolManagementSystem.ViewModels;
 
 namespace SchoolManagementSystem.Controllers
 {
@@ -18,20 +20,56 @@ namespace SchoolManagementSystem.Controllers
         }
 
         [HttpGet]
-        public IActionResult Student()
+        public IActionResult Student(string search, int? id)
         {
-            var studDTO = new StudDTO()
+            var students = new StudentVM();
+            if (!string.IsNullOrEmpty(search))
             {
-                Students = _ctx.Students.Where(s => s.IsActive == true).ToList()
-            };
-            if (studDTO != null)
-            {
-                return View("~/Views/Home/Student.cshtml", studDTO);
+                students.Students = _ctx.Students.Where(s =>
+                (
+                    s.StudNum.Contains(search) ||
+                    s.FirstName.Contains(search) ||
+                    s.LastName.Contains(search) ||
+                    s.Email.Contains(search)
+                ) && s.IsActive == true
+                ).ToList();
+
+                if (students.Students != null && students.Students.Count() > 0)
+                {
+                    return View("~/Views/Home/Student.cshtml", students);
+                }
+                return View("~/Views/Home/Student.cshtml");
             }
-            else
+
+            if (id != null)
             {
-                return View();
+                students.Students = _ctx.Students.Where(s => s.IsActive == true).ToList();
+                var student = _ctx.Students.Where(s => s.Id == id && s.IsActive == true).FirstOrDefault();
+                if (student != null)
+                {
+                    students.NewStudent = new StudDTO()
+                    {
+                        Id = student.Id,
+                        StudNum = student.StudNum,
+                        FirstName = student.FirstName,
+                        LastName = student.LastName,
+                        Email = student.Email,
+
+                    };
+                }
+
+                return View("~/Views/Home/Student.cshtml", students);
             }
+
+
+            students.Students = _ctx.Students.Where(s => s.IsActive == true).ToList();
+
+            if (students.Students != null && students.Students.Count() > 0)
+            {
+                return View("~/Views/Home/Student.cshtml", students);
+            }
+            return View("~/Views/Home/Student.cshtml");
+
         }
 
         [HttpGet]
@@ -42,10 +80,8 @@ namespace SchoolManagementSystem.Controllers
             {
                 return View("~/Views/Home/Course.cshtml", courses);
             }
-            else
-            {
-                return View();
-            }
+            return View("~/Views/Home/Course.cshtml");
+
         }
 
         [HttpGet]
@@ -56,10 +92,8 @@ namespace SchoolManagementSystem.Controllers
             {
                 return View("~/Views/Home/Enrol", enrols);
             }
-            else
-            {
-                return View();
-            }
+            return View("~/Views/Home/Enrol");
+
         }
     }
 }

@@ -33,11 +33,11 @@ body {
     align-items: center;
     justify-content: center;
     min-width: 500px;
-    background: #637860;
+    background: #e3ecf5;
 }
 
 .right-container {
-    background: #cccccc;
+    background: #A6CAEC;
     flex: 1;
     padding: 50px;
     align-items: center;
@@ -64,36 +64,42 @@ body {
 .search-container {
     height: 40px;
     width: 100%;
+    max-width: 600px;
     display: flex;
     margin-bottom: 10px;
+    gap: 5px;
 }
 
 .search {
-    width: 90%;
     display: flex;
     flex: 1;
+    background: #c5def6;
+    border-radius: 5px 5px 0 0;
 }
 
     .search img {
         padding: 5px;
         border-top-left-radius: 5px;
-        background: #cccccc;
     }
 
     .search input {
         flex: 1;
-        background: #cccccc;
         padding: 10px;
         border: none;
         outline: none;
+        background: transparent;
+    }
+    .search:focus-within {
+        outline: none;
+        box-shadow: none;
+        border: none;
+        background: #d4e1ee;
     }
 
-    .search button:hover {
-        background: #646464;
-    }
+
 
     .search button {
-        background: #4e4e4e;
+        background: #215F9A;
         padding: 10px 40px;
         border-top-right-radius: 5px;
         align-items: center;
@@ -105,10 +111,12 @@ body {
         letter-spacing: 1px;
         cursor: pointer;
     }
-
+    .search button:hover {
+        background: #264a6d;
+    }
 .add_btn {
-    margin-left: 5px;
-    width: 8%;
+    width: 50px;
+    min-width: 40px;
     color: #FFF;
     font-size: 20px;
     font-weight: 800;
@@ -142,10 +150,10 @@ body {
     border: none;
     outline: none;
     border-radius: 5px;
-    background: #808080;
+    background: #215F9A;
 }
     .submit_btn:hover {
-        background: #4e4e4e;
+        background: #264a6d;
     }
 
 .cancel_btn {
@@ -158,14 +166,12 @@ body {
     flex: 1;
     align-items: center;
     justify-content: center;
-    border: #808080;
-    outline: #808080;
     border-radius: 5px;
-    background: none;
+    background: #a81f1f;
 }
 
     .cancel_btn:hover {
-        background: #808080;
+        background: #d80c0c;
     }
 .reset {
     display: flex;
@@ -188,3 +194,26 @@ tbody tr:hover td {
     background-color: #d5d5d5;
     cursor: pointer;
 }
+
+.form-control {
+    background: #fafafa;
+    border: none;
+    border-color: #215F9A;
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: none;
+}
+.form-control:focus{
+    outline: none;
+    box-shadow: none;
+    border: 3px solid #4373a0;
+}
+
+.form-control input{
+    background: #f3f3f3;
+}
+
+.create-form{
+    display: none;
+}
+

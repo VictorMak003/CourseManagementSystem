@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using SchoolManagementSystem.Data;
+using SchoolManagementSystem.DTOs;
 using SchoolManagementSystem.Models;
+using SchoolManagementSystem.ViewModels;
 using System.Threading.Tasks;
 
 namespace SchoolManagementSystem.Controllers
@@ -16,76 +19,80 @@ namespace SchoolManagementSystem.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
-        public IActionResult StudentDash()
-        {
-           var studDTO = new StudDTO()
-           {
-               Students = _ctx.Students.Where(s => s.IsActive == true).ToList(),
-           }; 
-            return View(studDTO);
-
-        }
-
-        [HttpGet]
-        public IActionResult Search(string search)
-        {
-            var student = new StudDTO()
-            {
-                Students = _ctx.Students.Where(s => s.IsActive == true && (s.StudNum.Contains(search) || s.FirstName.Contains(search) || s.LastName.Contains(search)))
-            };
-
-            if (student != null)
-            {
-                return View("~/Views/Home/Student.cshtml", student);
-            }
-            return View();
-        }
 
         [HttpPost]
-        public async Task<IActionResult> Create(StudDTO stud)
+        public async Task<IActionResult> Create(StudentVM viewModel)
         {
-            if (!ModelState.IsValid)
+            var student = viewModel.NewStudent;
+
+            if (ModelState.IsValid && student != null)
             {
-                if (_ctx.Students.Any(s => s.StudNum == stud.StudNum || s.Email == stud.Email))
+                bool exists = _ctx.Students.Any(s => s.StudNum == student.StudNum || s.Email == student.Email);
+                if (exists)
                 {
-                    ModelState.AddModelError("Student", "Student number or email already exists!");
-                    return View("~/Views/Home/Student.cshtml", stud);
+                    ModelState.AddModelError("Student", "Student Already exists");
+                    return View("~/Views/Home/Student.cshtml", viewModel);
                 }
-                ModelState.AddModelError("Student", "Please enter valid student details.");
-                return View(stud);
-            }
-            Student student = new Student()
-            {
-                StudNum = stud.StudNum,
-                FirstName = stud.FirstName,
-                LastName = stud.LastName,
-                Email = stud.Email
-            };
 
-            await _ctx.AddAsync(student);
-            await _ctx.SaveChangesAsync();
-            return RedirectToAction("Nav", "Student");
+                var newStudent = new Student()
+                {
+                    StudNum = student.StudNum,
+                    FirstName = student.FirstName,
+                    LastName = student.LastName,
+                    Email = student.Email,
+                    DateCreated = DateTime.Now,
+                    IsActive = true,
+                };
+
+                _ctx.Students.Add(newStudent);
+                await _ctx.SaveChangesAsync();
+                return RedirectToAction("Student", "Nav");
+            }
+
+            ModelState.AddModelError("Student", "Please enter valid details");
+            return View("~/Views/Home/Student.cshtml", viewModel);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(StudDTO stud)
+        public async Task<IActionResult> Edit(StudentVM viewModel)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid || viewModel.NewStudent == null)
             {
                 ModelState.AddModelError("Student", "Please fill all fields");
-                return View("~/Views/Home/Student.cshtml", stud);
+                _logger.LogInformation("Student not found");
+                return View("~/Views/Home/Student.cshtml", viewModel);
             }
-
-            var student = await _ctx.Students.FirstOrDefaultAsync(s => s.Id == stud.Id);
-            if (student == null)
+            
+            var newStudent = viewModel.NewStudent;
+            if (newStudent == null)
             {
+                _logger.LogInformation("VM Student not found");
                 return NotFound();
             }
 
-            _ctx.Update(student);
+            var student = await _ctx.Students.FirstOrDefaultAsync(s => s.Id == newStudent.Id);
+
+            if (student == null)
+            {
+                _logger.LogInformation("DB Student not found");
+                return NotFound();
+            }
+
+            var update = await TryUpdateModelAsync<Student>(
+                student,
+                "",
+                st => st.StudNum, st => st.FirstName, st => st.LastName, st => st.Email);
+            
+
+            student.StudNum = newStudent.StudNum;
+            student.FirstName = newStudent.FirstName;
+            student.LastName = newStudent.LastName;
+            student.Email = newStudent.Email;
+            student.DateCreated = student.DateCreated;
+
+            _logger.LogInformation($"Student({student.StudNum}) Updated");
             await _ctx.SaveChangesAsync();
-            return RedirectToAction("Nav", "Student");
+            return RedirectToAction("Student", "Nav");
         }
 
         [HttpPost]

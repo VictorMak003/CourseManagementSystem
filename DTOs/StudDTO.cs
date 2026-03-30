@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SchoolManagementSystem.Models;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SchoolManagementSystem.Models
+namespace SchoolManagementSystem.DTOs
 {
     public class StudDTO
     {
@@ -11,7 +12,5 @@ namespace SchoolManagementSystem.Models
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
         public string Email { get; set; } = null!;
-
-        public IEnumerable<Student>? Students { get; set; }
     }
 }

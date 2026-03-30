@@ -1,4 +1,4 @@
-﻿@model SchoolManagementSystem.Models.StudDTO;
+﻿@model SchoolManagementSystem.ViewModels.StudentVM;
 
 @{
     ViewData["Title"] = "Student";
@@ -7,9 +7,9 @@
     <div class="left-container">
         <div class="student-list">
             <div class="search-container">
-                <form class="search" asp-controller="Student" asp-action="Search" method="GET">
+                <form class="search" asp-controller="Nav" asp-action="Student" method="GET">
                     <img src="~/images/search-icon.png" alt="search-icon" />
-                    <input type="search" name="search" placeholder="Search for Student" />
+                    <input type="text" name="search" placeholder="Search for Student" />
                     <button type="submit">Search</button>
                 </form>
                 <button class="add_btn">+</button>
@@ -26,22 +26,33 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @if (Model != null && Model.Students.Any())
+                    @if (Model.Students != null)
                     {
-                        @foreach (var student in Model.Students)
+                        if (Model.Students.Count() > 0)
                         {
-                            <tr class="details">
-                                <td>@student.Id</td>
-                                <td>@student.StudNum</td>
-                                <td>@student.FirstName @student.LastName</td>
-                                <td colspan="2">@student.Email</td>
+                            @foreach (var student in Model.Students)
+                            {
+
+                                <tr class="edit_btn" data-id="@student.Id">
+                                    <td>@student.Id</td>
+                                    <td>@student.StudNum</td>
+                                    <td>@student.FirstName @student.LastName</td>
+                                    <td colspan="2">@student.Email</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="5">No students found</td>
                             </tr>
                         }
+                        
                     }
                     else
                     {
                         <tr>
-                            <td colspan="5">No students found</td>
+                            <td colspan="5">Error Retrieving Students</td>
                         </tr>
                     }
                 </tbody>
@@ -53,35 +64,70 @@
 
 
     <div class="right-container">
+        <div class="default-form"></div>
         <div class="create-form">
             <h2>Add Student</h2>
             <form asp-controller="Student" asp-action="Create" method="post" enctype="multipart/form-data">
                 <div class="form-group mb-3">
-                    <input asp-for="StudNum" placeholder="Student Number" class="form-control">
-                    <span asp-validation-for="StudNum" class="text-danger"></span>
+                    <input asp-for="NewStudent.StudNum" placeholder="Student Number" class="form-control">
+                    <span asp-validation-for="NewStudent.StudNum" class="text-danger"></span>
                 </div>
                 <div class="form-group mb-3">
-                    <input asp-for="FirstName" placeholder="First Name" class="form-control">
-                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                    <input asp-for="NewStudent.FirstName" placeholder="First Name" class="form-control">
+                    <span asp-validation-for="NewStudent.FirstName" class="text-danger"></span>
                 </div>
                 <div class="form-group mb-3">
-                    <input asp-for="LastName" placeholder="Last Name" class="form-control">
-                    <span asp-validation-for="LastName" class="text-danger"></span>
+                    <input asp-for="NewStudent.LastName" placeholder="Last Name" class="form-control">
+                    <span asp-validation-for="NewStudent.LastName" class="text-danger"></span>
                 </div>
                 <div class="form-group mb-3">
-                    <input asp-for="Email" placeholder="Email" class="form-control">
-                    <span asp-validation-for="Email" class="text-danger"></span>
+                    <input asp-for="NewStudent.Email" placeholder="Email" class="form-control">
+                    <span asp-validation-for="NewStudent.Email" class="text-danger"></span>
                 </div>
 
                 <div class="form_btns">
-                        <button type="submit" class="submit_btn">Submit</button>
-                        <a class="btn cancel_btn" asp-controller="Nav" asp-action="Student" role="button">
-                            Cancel
-                        </a>
+                    <button type="submit" class="submit_btn">Submit</button>
+                    <a class="btn cancel_btn" asp-controller="Nav" asp-action="Student" role="button">
+                        Cancel
+                    </a>
                 </div>
             </form>
         </div>
         <div class="edit-form">
+            @if(@Model.NewStudent != null)
+            {
+            <script src="~/js/site.js"></script>
+            <script>
+                    showForm(document.getElementById("edit-form"));
+            </script>
+                <h2>Edit Student</h2>
+            <form asp-controller="Student" asp-action="Edit" method="post" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="@Model.NewStudent.Id" value="@Model.NewStudent.Id" />
+                <div class="form-group mb-3">
+                        <input asp-for="@Model.NewStudent.StudNum" placeholder="Student Number" value="@Model.NewStudent.StudNum" class="form-control">
+                        <span asp-validation-for="@Model.NewStudent.StudNum" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                        <input asp-for="@Model.NewStudent.FirstName" placeholder="First Name" value="@Model.NewStudent.FirstName" class="form-control">
+                        <span asp-validation-for="@Model.NewStudent.FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                        <input asp-for="@Model.NewStudent.LastName" placeholder="Last Name" value="@Model.NewStudent.LastName" class="form-control">
+                        <span asp-validation-for="@Model.NewStudent.LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                        <input asp-for="@Model.NewStudent.Email" placeholder="Email" value="@Model.NewStudent.Email" class="form-control">
+                        <span asp-validation-for="@Model.NewStudent.Email" class="text-danger"></span>
+                </div>
+
+                <div class="form_btns">
+                    <button type="submit" class="submit_btn">Submit</button>
+                    <a class="btn cancel_btn" asp-controller="Nav" asp-action="Student" role="button">
+                        Cancel
+                    </a>
+                </div>
+            </form>
+            }
         </div>
         <div class="delete-form">
         </div>

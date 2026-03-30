@@ -144,7 +144,6 @@ C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG73
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\scopedcss\bundle\SchoolManagementSystem.styles.css
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\scopedcss\projectbundle\SchoolManagementSystem.bundle.scp.css
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\mx01kz75w7-61n19gt1b8.gz
-C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\7r6c5oo4p5-xtxxf3hu2r.gz
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\r8w2sv8eu5-bqjiyaj88i.gz
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\cdqk165d3y-c2jlpeoesf.gz
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\r5327a1om3-erw9l3u2r3.gz
@@ -218,4 +217,6 @@ C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG73
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\SchoolManagementSystem.genruntimeconfig.cache
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\ref\SchoolManagementSystem.dll
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\SchoolManagementSystem.sourcelink.json
-C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\6tfu9rnub9-pb5voh19ae.gz
+C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\e66ihds3e2-5ipweew5fc.gz
+C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\7r6c5oo4p5-3zqyy6lt07.gz
+C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\6tfu9rnub9-orqgcabinm.gz
