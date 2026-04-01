@@ -31,7 +31,7 @@ namespace SchoolManagementSystem.Controllers
                 if (exists)
                 {
                     ModelState.AddModelError("Student", "Student Already exists");
-                    return View("~/Views/Home/Student.cshtml", viewModel);
+                    return View("~/Views/Home/Student.cshtml");
                 }
 
                 var newStudent = new Student()
@@ -66,16 +66,18 @@ namespace SchoolManagementSystem.Controllers
             var newStudent = viewModel.NewStudent;
             if (newStudent == null)
             {
+                ModelState.AddModelError("Student", "Student not found");
                 _logger.LogInformation("VM Student not found");
-                return NotFound();
+                return View("~/Views/Home/Student.cshtml", viewModel);
             }
 
             var student = await _ctx.Students.FirstOrDefaultAsync(s => s.Id == newStudent.Id);
 
             if (student == null)
             {
+                ModelState.AddModelError("Student", "Issue with Database, please try again later...");
                 _logger.LogInformation("DB Student not found");
-                return NotFound();
+                return View("~/Views/Home/Student.cshtml", viewModel);
             }
 
             var update = await TryUpdateModelAsync<Student>(
@@ -101,12 +103,15 @@ namespace SchoolManagementSystem.Controllers
             var student = _ctx.Students.FirstOrDefault(s => s.Id == id);
             if (student == null)
             {
-                return NotFound();
+                _logger.LogInformation("DB Student not found");
+                return RedirectToAction("Student", "Nav");
             }
 
+            var delete = await TryUpdateModelAsync<Student>(student, "", st => st.IsActive);
             student.IsActive = false;
+            _logger.LogInformation($"Student({student.StudNum}) Deleted");
             await _ctx.SaveChangesAsync();
-            return RedirectToAction("Nav", "Student");
+            return RedirectToAction("Student", "Nav");
         }
     }
 }

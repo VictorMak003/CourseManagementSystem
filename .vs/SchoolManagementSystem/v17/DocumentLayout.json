@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|c:\\users\\victo\\onedrive - advtech ltd\\documents\\bcad323\\year 3\\semester 2\\prog7312\\schoolmanagementsystem\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|c:\\users\\victo\\onedrive - advtech ltd\\documents\\bcad323\\year 3\\semester 2\\prog7312\\schoolmanagementsystem\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,12 +15,12 @@
       "RelativeMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|solutionrelative:views\\home\\student.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|c:\\users\\victo\\onedrive - advtech ltd\\documents\\bcad323\\year 3\\semester 2\\prog7312\\schoolmanagementsystem\\controllers\\navcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|solutionrelative:controllers\\navcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|c:\\users\\victo\\onedrive - advtech ltd\\documents\\bcad323\\year 3\\semester 2\\prog7312\\schoolmanagementsystem\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|c:\\users\\victo\\onedrive - advtech ltd\\documents\\bcad323\\year 3\\semester 2\\prog7312\\schoolmanagementsystem\\controllers\\navcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C4DCE89-B09D-49AC-95EE-E563DF13DB07}|SchoolManagementSystem.csproj|solutionrelative:controllers\\navcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +30,21 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Student.cshtml",
+              "DocumentMoniker": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Views\\Home\\Student.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Student.cshtml",
+              "ToolTip": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Views\\Home\\Student.cshtml",
+              "RelativeToolTip": "Views\\Home\\Student.cshtml",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAAKkAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-01T15:17:47.144Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -36,46 +53,46 @@
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
               "ToolTip": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\wwwroot\\js\\site.js",
               "RelativeToolTip": "wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBwAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwCkAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-03-27T11:47:59.968Z",
+              "WhenOpened": "2026-04-01T15:17:36.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Student.cshtml",
-              "DocumentMoniker": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Views\\Home\\Student.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Student.cshtml",
-              "ToolTip": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Views\\Home\\Student.cshtml",
-              "RelativeToolTip": "Views\\Home\\Student.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAkwDYAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-23T10:52:30.834Z",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAGkAAAAAAAAAAAD4v28AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-31T08:58:34.766Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "NavController.cs",
               "DocumentMoniker": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Controllers\\NavController.cs",
               "RelativeDocumentMoniker": "Controllers\\NavController.cs",
               "ToolTip": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Controllers\\NavController.cs",
               "RelativeToolTip": "Controllers\\NavController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwDAAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-23T13:28:51.796Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "StudentController.cs",
               "DocumentMoniker": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
               "ToolTip": "C:\\Users\\victo\\OneDrive - ADvTECH Ltd\\Documents\\BCAD323\\Year 3\\Semester 2\\PROG7312\\SchoolManagementSystem\\Controllers\\StudentController.cs",
               "RelativeToolTip": "Controllers\\StudentController.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAHEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T13:34:32.236Z",
               "EditorCaption": ""

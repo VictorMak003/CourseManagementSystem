@@ -36,6 +36,100 @@ body {
     background: #e3ecf5;
 }
 
+.details-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 12px 80px;
+    margin-bottom: 30px;
+}
+
+.label{
+    font-weight: 600;
+    text-align: left;
+}
+
+.value{
+    text-align: right;
+}
+
+.back_btn {
+    position: absolute;
+    font-weight: 800;
+    top: 20px;
+    left: 20px;
+}
+
+.back_btn a {
+    background: #8c8c8c;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.edit_btn,
+.delete_btn{
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #FFF;
+}
+.edit_btn {
+    margin: 5px;
+    padding: 5px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #215F9A;
+}
+    .edit_btn:hover {
+        background: #1f4364;
+    }
+.delete_btn {
+    margin: 5px;
+    padding: 10px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #a81f1f;
+}
+    .delete_btn:hover {
+        cursor: pointer;
+        background: #383838;
+    }
+.del_btn {
+    margin: 5px;
+    padding: 10px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #a81f1f;
+}
+
+    .del_btn:hover {
+        cursor: pointer;
+        background: #d80c0c;
+    }
+
 .right-container {
     background: #A6CAEC;
     flex: 1;
@@ -157,6 +251,7 @@ body {
     }
 
 .cancel_btn {
+    text-decoration: none;
     margin: 5px;
     padding: 10px;
     color: #000;
@@ -213,7 +308,21 @@ tbody tr:hover td {
     background: #f3f3f3;
 }
 
+.default-form img {
+    padding: 20px;
+    opacity: 20%;
+    border-radius: 50%;
+}
+.details-form{
+    display: none;
+}
 .create-form{
+    display: none;
+}
+.edit-form {
+    display: none;
+}
+.delete-form {
     display: none;
 }
 

@@ -137,6 +137,7 @@ C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG73
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\SchoolManagementSystem.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\SchoolManagementSystem.RazorAssemblyInfo.cache
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\SchoolManagementSystem.RazorAssemblyInfo.cs
+C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\SchoolManagementSystem.sourcelink.json
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
@@ -216,7 +217,5 @@ C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG73
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\SchoolManagementSystem.pdb
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\SchoolManagementSystem.genruntimeconfig.cache
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\ref\SchoolManagementSystem.dll
-C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\SchoolManagementSystem.sourcelink.json
-C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\e66ihds3e2-5ipweew5fc.gz
-C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\7r6c5oo4p5-3zqyy6lt07.gz
-C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\6tfu9rnub9-orqgcabinm.gz
+C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\6tfu9rnub9-gv79t0x70b.gz
+C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\obj\Debug\net9.0\compressed\7r6c5oo4p5-gty92x2yli.gz

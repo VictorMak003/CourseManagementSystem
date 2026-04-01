@@ -1,6 +1,8 @@
-wwwroot\js\site.js
-wwwroot\favicon.ico
 wwwroot\css\site.css
+wwwroot\favicon.ico
+wwwroot\images\Logo.png
+wwwroot\images\restart-icon.png
+wwwroot\images\search-icon.png
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -61,13 +63,9 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\images\restart-icon.png
-wwwroot\images\search-icon.png
-wwwroot\images\Logo.png
-wwwroot\js\newFile.js
-C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\wwwroot\js\newFile.js
-C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\wwwroot\favicon.ico
+wwwroot\js\site.js
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\wwwroot\css\site.css
+C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\wwwroot\favicon.ico
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 C:\Users\victo\OneDrive - ADvTECH Ltd\Documents\BCAD323\Year 3\Semester 2\PROG7312\SchoolManagementSystem\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css

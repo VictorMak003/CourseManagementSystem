@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Student";
 }
+<script src="~/js/site.js"></script>
 <div class="main-container">
     <div class="left-container">
         <div class="student-list">
@@ -33,7 +34,7 @@
                             @foreach (var student in Model.Students)
                             {
 
-                                <tr class="edit_btn" data-id="@student.Id">
+                                <tr class="details_btn" data-id="@student.Id">
                                     <td>@student.Id</td>
                                     <td>@student.StudNum</td>
                                     <td>@student.FirstName @student.LastName</td>
@@ -47,7 +48,7 @@
                                 <td colspan="5">No students found</td>
                             </tr>
                         }
-                        
+
                     }
                     else
                     {
@@ -58,13 +59,53 @@
                 </tbody>
             </table>
         </div>
-        <div class="student-details">
-        </div>
+
+        @if (Model.NewStudent != null)
+        {
+            <div class="student-details">
+                <script>
+                    document.querySelector(".student-list").style.display = "none";
+                    document.querySelector(".details-form").style.display = "block";
+                </script>
+
+                <div class="back_btn">
+                    <a asp-controller="Nav" asp-action="Student">←</a>
+                </div>
+
+                <h2>Student Details</h2>
+
+                <div class="details-grid">
+                    <span class="label">Student Number :</span>
+                    <span class="value">@Model.NewStudent.StudNum</span>
+
+                    <span class="label">First Name :</span>
+                    <span class="value">@Model.NewStudent.FirstName</span>
+
+                    <span class="label">Last Name :</span>
+                    <span class="value">@Model.NewStudent.LastName</span>
+
+                    <span class="label">Email :</span>
+                    <span class="value">@Model.NewStudent.Email</span>
+                </div>
+
+                <div class="form_btns">
+                    <button type="submit" class="edit_btn" data-id="@Model.NewStudent.Id">Edit</button>
+                    <a class="delete_btn" data-id="@Model.NewStudent.Id" role="button">
+                        Delete
+                    </a>
+                </div>
+            </div>
+
+        }
     </div>
 
 
+
     <div class="right-container">
-        <div class="default-form"></div>
+        <div class="default-form">
+            <img src="~/images/Logo.png" alt="School" />
+        </div>
+
         <div class="create-form">
             <h2>Add Student</h2>
             <form asp-controller="Student" asp-action="Create" method="post" enctype="multipart/form-data">
@@ -87,50 +128,76 @@
 
                 <div class="form_btns">
                     <button type="submit" class="submit_btn">Submit</button>
-                    <a class="btn cancel_btn" asp-controller="Nav" asp-action="Student" role="button">
-                        Cancel
-                    </a>
+                    <a class="cancel_btn" role="button">Cancel</a>
                 </div>
             </form>
         </div>
-        <div class="edit-form">
-            @if(@Model.NewStudent != null)
-            {
-            <script src="~/js/site.js"></script>
-            <script>
-                    showForm(document.getElementById("edit-form"));
-            </script>
+
+        @if (Model.NewStudent != null)
+        {
+            <div class="edit-form">
+                @* <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        document.querySelectorAll(".edit_btn").forEach(btn => {
+                            btn.addEventListener("click", function (){
+                                showForm(document.querySelector("edit-form")
+                            });
+                        });
+                    });
+                </script> *@
                 <h2>Edit Student</h2>
-            <form asp-controller="Student" asp-action="Edit" method="post" enctype="multipart/form-data">
+                <form asp-controller="Student" asp-action="Edit" method="post" enctype="multipart/form-data">
                     <input type="hidden" asp-for="@Model.NewStudent.Id" value="@Model.NewStudent.Id" />
-                <div class="form-group mb-3">
+                    <div class="form-group mb-3">
                         <input asp-for="@Model.NewStudent.StudNum" placeholder="Student Number" value="@Model.NewStudent.StudNum" class="form-control">
                         <span asp-validation-for="@Model.NewStudent.StudNum" class="text-danger"></span>
-                </div>
-                <div class="form-group mb-3">
+                    </div>
+                    <div class="form-group mb-3">
                         <input asp-for="@Model.NewStudent.FirstName" placeholder="First Name" value="@Model.NewStudent.FirstName" class="form-control">
                         <span asp-validation-for="@Model.NewStudent.FirstName" class="text-danger"></span>
-                </div>
-                <div class="form-group mb-3">
+                    </div>
+                    <div class="form-group mb-3">
                         <input asp-for="@Model.NewStudent.LastName" placeholder="Last Name" value="@Model.NewStudent.LastName" class="form-control">
                         <span asp-validation-for="@Model.NewStudent.LastName" class="text-danger"></span>
-                </div>
-                <div class="form-group mb-3">
+                    </div>
+                    <div class="form-group mb-3">
                         <input asp-for="@Model.NewStudent.Email" placeholder="Email" value="@Model.NewStudent.Email" class="form-control">
                         <span asp-validation-for="@Model.NewStudent.Email" class="text-danger"></span>
-                </div>
+                    </div>
 
-                <div class="form_btns">
-                    <button type="submit" class="submit_btn">Submit</button>
-                    <a class="btn cancel_btn" asp-controller="Nav" asp-action="Student" role="button">
-                        Cancel
-                    </a>
+                    <div class="form_btns">
+                        <button type="submit" class="submit_btn">Submit</button>
+                        <a class="btn cancel_btn" role="button">Cancel</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="delete-form">
+                @* <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        document.querySelectorAll(".delete_btn").forEach(btn => {
+                            btn.addEventListener("click", function () {
+                                showForm(document.querySelector(".delete-form")
+                            });
+                        });
+                    });
+                </script> *@
+                <h2>Are You Sure?</h2>
+                <div class="details-grid">
+                    <span class="label">Student Number:</span>
+                    <span class="value">@Model.NewStudent.StudNum</span>
                 </div>
-            </form>
-            }
-        </div>
-        <div class="delete-form">
-        </div>
+                <form asp-controller="Student" asp-action="Delete" method="post" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="@Model.NewStudent.Id" value="@Model.NewStudent.Id" />
+                    <div class="form_btns">
+                        <button type="submit" class="submit_btn">Delete</button>
+                        <a class="btn cancel_btn" asp-controller="Nav" asp-action="Student" role="button">
+                            Cancel
+                        </a>
+                    </div>
+                </form>
+            </div>
+        }
     </div>
 </div>
 

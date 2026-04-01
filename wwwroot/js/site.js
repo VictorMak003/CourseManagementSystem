@@ -1,7 +1,11 @@
-﻿var defaultForm = document.getElementById("default-form");
-var createForm = document.getElementById("create-form");
-var editForm = document.getElementById("edit-form");
-var deleteForm = document.getElementById("delete-form");
+﻿var studentList = document.querySelector(".student-list");
+var studentDetails = document.querySelector(".student-details");
+var defaultForm = document.querySelector(".default-form");
+var createForm = document.querySelector(".create-form");
+var editForm = document.querySelector(".edit-form");
+var deleteForm = document.querySelector(".delete-form");
+
+
 function showForm(formToShow) {
     const forms = [defaultForm, createForm, editForm, deleteForm];
 
@@ -21,16 +25,41 @@ document.addEventListener("DOMContentLoaded", function () {
         showForm(createForm)
     });
 
-    document.querySelectorAll(".edit_btn").forEach(btn => {
+    document.querySelectorAll(".details_btn").forEach(btn => {
         btn.addEventListener("click", function () {
             const studentId = this.dataset.id;
             window.location.href = `/Nav/Student?id=${studentId}`;
         });
     });
-
-    //document.getElementById("delete_btn").addEventListener("click", function () {
-    //    showForm(deleteForm)
+    //document.querySelectorAll(".edit_btn").forEach(btn => {
+    //    btn.addEventListener("click", function () {
+    //        const studentId = this.dataset.id;
+    //        window.location.href = `/Nav/Student?id=${studentId}`;
+    //    });
     //});
+    document.querySelectorAll(".edit_btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+            showForm(editForm);
+        });
+    });
+    //document.querySelectorAll(".delete_btn").forEach(btn => {
+    //    btn.addEventListener("click", function () {
+    //    const studentId = this.dataset.id;
+    //    window.location.href = `/Nav/Student?id=${studentId}`;
+    //    });
+    //});
+    document.querySelectorAll(".delete_btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+            showForm(deleteForm);
+        });
+    });
 
+    document.querySelectorAll(".cancel_btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+            showForm(defaultForm);
+        });
+    });
 });
+
+
 

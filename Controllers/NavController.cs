@@ -41,6 +41,9 @@ namespace SchoolManagementSystem.Controllers
                 return View("~/Views/Home/Student.cshtml");
             }
 
+            students.Students = _ctx.Students.Where(s => s.IsActive == true).ToList();
+            students.NewStudent = null;
+
             if (id != null)
             {
                 students.Students = _ctx.Students.Where(s => s.IsActive == true).ToList();
@@ -57,19 +60,15 @@ namespace SchoolManagementSystem.Controllers
 
                     };
                 }
-
                 return View("~/Views/Home/Student.cshtml", students);
             }
 
-
-            students.Students = _ctx.Students.Where(s => s.IsActive == true).ToList();
 
             if (students.Students != null && students.Students.Count() > 0)
             {
                 return View("~/Views/Home/Student.cshtml", students);
             }
             return View("~/Views/Home/Student.cshtml");
-
         }
 
         [HttpGet]
